@@ -4,9 +4,12 @@ var m = 10;
 for (var i = 0; i < n; i++) {
   for (var j = 0; j < m; j++) {
     x += (i+1)* (j+1);
-if((j+1)!==10)x+=','
-    x +='\t'
+   
+   if((j+1)!==10){
+		x+=','
+	      }
+   x +='\t'
   }
-  x += '\n';
+x += '\n';
 }
 console.log(x)
