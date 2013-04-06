@@ -170,8 +170,8 @@ floors4=T(3)(4*(h+piano))(floors4)
 
 
 floors=STRUCT([floors0,floors1,floors2,floors3,floors4])
-model=STRUCT([floors,pillars])
-model=T(3)((piano))(model)
+building=STRUCT([floors,pillars])
+building=T(3)((piano))(building)
 #VIEW(model)
 
 
@@ -294,6 +294,6 @@ stairfaces=T([2])([13.8])(stairfaces)
 
 
 #VIEW(stairfaces)
-model5 = STRUCT([model,stairfaces,blackwindow])
-VIEW(model5)
+building= STRUCT([building,stairfaces,blackwindow])
+VIEW(building)
 

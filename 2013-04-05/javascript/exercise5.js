@@ -170,8 +170,8 @@ DRAW(floors4)
 HIDE(floors4)
 
 var floors=STRUCT([floors0,floors1,floors2,floors3,floors4])
-var model=STRUCT([floors,pillars])
-var model=T([2])([piano])(model)
+var building=STRUCT([floors,pillars])
+var building=T([2])([piano])(building)
 
 //DRAW(model)
 
@@ -300,5 +300,5 @@ stairfaces=T([1])([13.8])(stairfaces)
 
 
 //DRAW(faces)
-var model = STRUCT([model, stairfaces,blackwindow]);
-DRAW(model);
+var building = STRUCT([model, stairfaces,blackwindow]);
+DRAW(building);

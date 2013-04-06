@@ -1,0 +1,1 @@
+I file .py dall'exercise 3 al 5 danno dei problemi se vengono copiato tutto il file insieme e copiato nel terminale...se,invece si fa un copia incolla di sezione non dà nessun problema di errore

@@ -134,8 +134,8 @@ floors4=T(3)(4*(h+piano))(floors4)
 
 
 floors=STRUCT([floors0,floors1,floors2,floors3,floors4])
-model=STRUCT([floors,pillars])
-model=T(3)((piano))(model)
+building=STRUCT([floors,pillars])
+building=T(3)((piano))(building)
 #VIEW(model)
 
 
@@ -255,6 +255,6 @@ faces=STRUCT([north,south,east,west])
 faces=R([1,2])((3*(PI/2)))(faces)
 faces=T([2])([13.8])(faces)
 
-modelapp = STRUCT([model,faces])
-model4=STRUCT( [modelapp,blackwindow])
-VIEW(model4)
+modelapp = STRUCT([building,faces])
+building=STRUCT( [modelapp,blackwindow])
+VIEW(building)

@@ -155,8 +155,8 @@ DRAW(floors4)
 HIDE(floors4)
 
 var floors=STRUCT([floors0,floors1,floors2,floors3,floors4])
-var model=STRUCT([floors,pillars])
-var model=T([2])([piano])(model)
+var building=STRUCT([floors,pillars])
+var building=T([2])([piano])(building)
 
 //DRAW(model)
 
@@ -286,6 +286,6 @@ faces=T([1])([13.8])(faces)
 //DRAW(faces)
 
 
-var modelapp = STRUCT([model,faces])
-var model4=STRUCT( [modelapp,blackwindow])
-DRAW(model4)
+var modelapp = STRUCT([building,faces])
+var building=STRUCT( [modelapp,blackwindow])
+DRAW(building)

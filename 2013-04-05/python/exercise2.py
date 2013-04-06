@@ -134,6 +134,6 @@ floors4=T(3)(4*(h+piano))(floors4)
 
 
 floors=STRUCT([floors0,floors1,floors2,floors3,floors4])
-model=STRUCT([floors,pillars])
-model=T(3)((piano))(model)
-VIEW(model)
+building=STRUCT([floors,pillars])
+building=T(3)((piano))(building)
+VIEW(building)
