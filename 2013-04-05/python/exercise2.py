@@ -1,6 +1,8 @@
-#Exercise 1
-#Define, with names pillars0, pillars1, pillars2, and pillars3, the models of pillars of the 4 house floors,
-#and put them into the STRUCT of an initial building model.
+#Exercise 2
+
+#Define plan by plan, with names floor0, floor1, floor2, floor3, and floor4,
+# the 5 models of horizontal partitions, and add them to the STRUCT of the building model.
+#
 
 from pyplasm import *
 
@@ -68,4 +70,70 @@ pillars3=T([3])([3*(h+solaio)])(pillars3)
 
 pillars=STRUCT([pillars0,pillars1,pillars2,pillars3])
 
-VIEW(pillars)
+#VIEW(pillars)
+
+
+#floors0
+piano=solaio
+floors0=INSR(PROD)(AA(QUOTE)([[21.25],[13.8],[piano]]))
+floors0=T(3)((-piano))(floors0)
+#VIEW(floors0)
+
+
+
+
+#floors 1
+
+fl11=INSR(PROD)(AA(QUOTE)([[21.25],[4,4.8,2.4],[piano]]))
+fl12=INSR(PROD)(AA(QUOTE)([[9,-3.5,(21.25-(3.5+9))],[-4,4.8,-2.4],[piano]]))
+fl13=T([1,2])([9+1.6,4+4.8-0.5])(INSR(PROD)(AA(QUOTE)([[(3.5-1.6)],[0.5],[piano]])))
+fl14=T([1,2])([-2.8,11])(INSR(PROD)(AA(QUOTE)([[4.8,-10,(2.8+21.25-10-4.8)],[13.8-4-4.8-2.4],[piano]])))
+floors1=STRUCT([fl11,fl12,fl13,fl14])
+floors1=T(3)((h+piano))(floors1)
+#VIEW(floors1)
+
+
+#floors 2
+
+
+fl21=T([1,2])([21.25-6.3,13.8-2.8])(INSR(PROD)(AA(QUOTE)([[6.3],[2.4],[piano]])))
+fl22=(PROD)([MKPOL([[[21.25-11.4,0],[21.25,0],[21.25,(4+4.8+2.4)],[9.6,(4+4.8+2.4)]],[[1,2,3,4]],None]),Q(piano)])
+
+floors2=STRUCT([fl21,fl22])
+floors2=T(3)(2*(h+piano))(floors2)
+#VIEW(floors2)
+
+
+#floors 3
+
+fl31=INSR(PROD)(AA(QUOTE)([[-11.1,(21.25-11.1)],[(13.8-2.8)],[piano]]))
+
+fl32=INSR(PROD)(AA(QUOTE)([[-11.1,-6.8,(21.25-11.1-6.8)],[-(13.8-2.8),2.8],[piano]]))
+
+fl33=INSR(PROD)(AA(QUOTE)([[11.1],[13.8],[piano]]))
+
+floors3=STRUCT([fl31,fl32,fl33])
+floors3=T(3)(3*(h+piano))(floors3)
+#VIEW(floors3)
+
+
+
+
+
+
+#floors 4
+
+
+fl41=INSR(PROD)(AA(QUOTE)([[(21.25-10.5)],[(3.8)],[piano]]))
+fl41=T(2)(10)(fl41)
+fl42=INSR(PROD)(AA(QUOTE)([[-(10+0.5),21.25-10],[13.8],[piano]]))
+floors4=STRUCT([fl41,fl42])
+floors4=T(3)(4*(h+piano))(floors4)
+#VIEW(floors4)
+
+
+
+floors=STRUCT([floors0,floors1,floors2,floors3,floors4])
+model=STRUCT([floors,pillars])
+model=T(3)((piano))(model)
+VIEW(model)
