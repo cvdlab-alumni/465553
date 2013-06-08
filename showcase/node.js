@@ -363,12 +363,9 @@ pista=SCALE([0,1,2])([18,1,15])(pista)
 
 //var model =STRUCT([fuselage,tip,fus,vetro,vents,ali,alettoni,totRbis,totR1,pista])
 
-
-var model =STRUCT([fuselage,tip,fus,vetro,vents,ali,alettoni,totRbis,totR1,elica,totbis,tot1,pista])
 //DRAW(model)
 
-
-
+var model =STRUCT([fuselage,tip,fus,vetro,vents,ali,alettoni,totRbis,totR1,elica,totbis,tot1,pista])
 
   return model
   })();
