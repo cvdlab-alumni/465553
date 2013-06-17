@@ -1,6 +1,3 @@
-
-
-
 //Showcase - Code.js - 
 //Matteo Riccardi - 465553
 //airplane
@@ -308,9 +305,6 @@ setInterval(function () {
 
        }, 60)
 
-//DRAW(totbis)
-//DRAW(tot1)
-//DRAW(elica)
  
 }
 move()
@@ -340,10 +334,10 @@ pista=SCALE([0,1,2])([18,1,15])(pista)
 
 //questo sottostante è  il model con l'attivazione delle ruote e elica che girano,logiamente riattivando i DRAW all'interno della funzione move()
 
-//var model =STRUCT([fuselage,tip,fus,vetro,vents,ali,alettoni,totRbis,totR1,pista])
+var model =STRUCT([fuselage,tip,fus,vetro,vents,ali,alettoni,totRbis,totR1,pista])
 
-
-var model =STRUCT([fuselage,tip,fus,vetro,vents,ali,alettoni,totRbis,totR1,elica,totbis,tot1,pista])
-//DRAW(model)
-
+DRAW(totbis)
+DRAW(tot1)
+DRAW(elica)
+DRAW(model)
 
